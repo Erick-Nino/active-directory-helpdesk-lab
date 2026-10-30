@@ -81,11 +81,11 @@ The lab demonstrates foundational system administration and Tier 1/2 support: im
   4. Opened Patty's account properties, checked **Unlock account**, and enforced **User must change password at next logon**.
   5. Verified successful client sign-in on `PATTY-PC` and prompted user to establish a new secure domain password.
 
-![Account Lockout Error](ticket-101-1-account-locked.png_2.jpg)
+![Account Lockout Error](ticket-101-1-account-locked.png.png)
 
-![Unlocking Account via RSAT ADUC](ticket-101-2-account-unlocked.png_2.jpg)
+![Unlocking Account via RSAT ADUC](ticket-101-2-account-unlocked.png.png)
 
-![First Logon Password Reset Prompt](ticket-101-3-account-ulocked_2.jpg)
+![First Logon Password Reset Prompt](ticket-101-3-account-ulocked.png)
 
 ---
 
@@ -100,9 +100,9 @@ The lab demonstrates foundational system administration and Tier 1/2 support: im
   4. Had user sign out and sign back in to refresh Kerberos ticket-granting tokens (TGT).
   5. Verified full read and write access to the HR departmental share on the client endpoint.
 
-![Access Denied Permission Error](ticket-102-1-access-denied_2.jpg)
+![Access Denied Permission Error](ticket-102-1-access-denied.png)
 
-![Adding User to HR Security Group via RSAT](ticket-102-2-add-group_2.png)
+![Adding User to HR Security Group via RSAT](ticket-102-2-add-group.png)
 
 ![Share Access Successfully Verified](ticket-102-3-add-group-user-verified.png)
 
@@ -119,13 +119,13 @@ The lab demonstrates foundational system administration and Tier 1/2 support: im
   4. Disjoined the client to a temporary workgroup, reset the Active Directory computer object, and re-authenticated domain join credentials for `lab.local`.
   5. Confirmed the *"Welcome to the lab.local domain"* dialog, rebooted the endpoint, and verified successful domain user authentication for Patty.
 
-![Domain Trust Relationship Error](ticket-103-1-trust-failed_2.jpg)
+![Domain Trust Relationship Error](ticket-103-1-trust-failed.png)
 
-![Local Administrator Fallback Sign-In](ticket-103-2-trust-failed-login-as-local-admin_2.jpg)
+![Local Administrator Fallback Sign-In](ticket-103-2-trust-failed-login-as-local-admin.png)
 
-![System Properties Domain Rejoin Configuration](ticket-103-3-domain-join-config_2.png)
+![System Properties Domain Rejoin Configuration](ticket-103-3-domain-join-config.png)
 
-![Domain Rejoin Success Prompt](ticket-103-4-domain-welcome_2.jpg)
+![Domain Rejoin Success Prompt](ticket-103-4-domain-welcome.png)
 
 ---
 
@@ -140,15 +140,15 @@ The lab demonstrates foundational system administration and Tier 1/2 support: im
   4. **Remediation & Cache Purge:** Reconfigured the adapter to point to the Domain Controller (`10.1.10.2`) using `netsh interface ip set dns name="Ethernet0" static 10.1.10.2`, then purged stale negative resolver entries using `ipconfig /flushdns`.
   5. **Resolution Verification:** Executed `nslookup lab.local` and `ping lab.local`. Confirmed internal DC DNS answered authoritatively and ICMP packets returned with 0% loss.
 
-![Layer 3 IP vs Domain Name Isolation](ticket-104-1-ping-test.pmg_2.jpg)
+![Layer 3 IP vs Domain Name Isolation](ticket-104-1-ping-test.pmg.png)
 
-![Adapter IP Configuration Audit](ticket-104-2-ipconfig-audit_2.jpg)
+![Adapter IP Configuration Audit](ticket-104-2-ipconfig-audit.png)
 
-![Resolver Query Timeout via nslookup](ticket-104-3-nslookup-failure_2.png)
+![Resolver Query Timeout via nslookup](ticket-104-3-nslookup-failure.png)
 
-![DNS Remediation and Cache Flush](ticket-104-4-dns-remediation_2.png)
+![DNS Remediation and Cache Flush](ticket-104-4-dns-remediation.png)
 
-![Resolution Verified and Domain Reachable](ticket-104-5-dns-verified_2.png)
+![Resolution Verified and Domain Reachable](ticket-104-5-dns-verified.png)
 
 ---
 
